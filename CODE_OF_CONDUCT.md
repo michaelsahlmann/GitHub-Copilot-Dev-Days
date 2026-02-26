@@ -1,5 +1,7 @@
 # Contributor Covenant Code of Conduct
 
+This Code of Conduct addresses our standards and expectations for conduct within this repository.
+
 ## Our Pledge
 
 In the interest of fostering an open and welcoming environment, we as

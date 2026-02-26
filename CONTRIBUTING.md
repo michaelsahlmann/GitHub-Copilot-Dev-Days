@@ -10,6 +10,32 @@ Contributions to this project are [released](https://help.github.com/articles/gi
 
 Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
 
+## Using GitHub Discussions
+
+We use **GitHub Discussions** as a shared space for community organizers and contributors to ask questions, share ideas, and collaborate around GitHub Copilot Dev Days.
+
+### When to use Discussions
+Use Discussions to:
+- Ask questions about event content, marketing materials, or organizing guidance
+- Share ideas, feedback, or lessons learned from hosting events
+- Start conversations about potential improvements to the event kit
+
+If you’ve found a **bug** or have a **specific change request**, please open a **GitHub Issue** so it can be tracked and triaged properly.
+
+### Community expectations
+Please help keep this space welcoming and useful:
+- Follow the repository’s [Code of Conduct](/CODE_OF_CONDUCT.md)
+- Be respectful and constructive
+- Stay on topic and relevant to this repository
+- Search existing Discussions before starting a new one
+- Avoid spam or unrelated promotional content
+
+### Security note
+Do **not** report security vulnerabilities in Discussions, Issues, or Pull Requests.  
+Please follow the process outlined in `SECURITY.md` for responsible disclosure.
+
+Thanks for helping make GitHub Copilot Dev Days a great experience for organizers and developers worldwide!
+
 ## Resources
 
 - [How to Contribute to Open Source](https://opensource.guide/how-to-contribute/)
