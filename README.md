@@ -44,7 +44,7 @@ Both formats are designed to be interactive and hands-on, encouraging participan
 
 
 ## ❓ Questions
-Head to the [Discussions](https://aka.ms/githubcopilotdevdays/discussion) area in this repo to ask questions. 
+Head to the [Discussions](https://aka.ms/githubcopilotdevdays/discussion) area in this repo to ask questions.
 
 For more information about when to use GitHub Discussions in this repository, please read our [contributing guide](/CONTRIBUTING.md).
 
