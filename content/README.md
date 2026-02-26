@@ -40,7 +40,7 @@ GitHub Copilot Dev Days events are open to developers of all experience levels. 
 
 **For attendees**:
 
-- **GitHub Copilot free subscription** — [Sign up here](https://github.com/features/copilot?utm_source=devdays-event-signup-cta&utm_medium=web&utm_campaign=copilot-devdays-2026)
+- **GitHub Copilot free subscription** — [Sign up here](https://aka.ms/get-github-copilot-devdays)
 
 - Laptop — Required for events that include a hands-on workshop.
 Note: Some events may focus on specific topics (e.g., App Modernization) that are more relevant for experienced developers.
