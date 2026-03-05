@@ -78,6 +78,7 @@ This helps identify your event as part of the global initiative.
 ### 📧 5. Communications
 
 * [ ] Send **event reminders** and any **prerequisites** to registered participants.
+* [ ] Include the workshop site link — **[copilot-dev-days.github.io](https://copilot-dev-days.github.io)** — in your attendee communications so participants can access the hands-on lab content.
 * [ ] Confirm **attendance** a few days before the event.
 
 > [!TIP]

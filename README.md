@@ -36,10 +36,13 @@ Both formats are designed to be interactive and hands-on, encouraging participan
 
 ### 📚 Resources available
 
+ **👉 Send attendees to [copilot-dev-days.github.io](https://copilot-dev-days.github.io)** — the central site where all GitHub Copilot Dev Days hands-on workshops are published. The site displays every available workshop option so attendees can easily find and follow the lab for your event.
+
 | Topic                                      | Description                                                         | Resources                                |
 | :----------------------------------------- | :------------------------------------------------------------------ | :--------------------------------------- |
 | 📁 [**Organization Guide**](/organization) | Practical guidance to plan and run your event from start to finish. | Event checklist, registration page draft |
-| 📁 [**Content**](/content)                 | Technical content for sessions and workshops.                       | Presentation slides, hands-on labs       |
+| 📁 [**Content - Organizer View**](/content)                 | Technical content for sessions and workshops.                       | Presentation slides, hands-on labs       |
+| 📁 [**Content - Attendee View**](https://copilot-dev-days.github.io)                 | Technical content for sessions and workshops.                       | Hands-on labs       |
 | 📁 [**Marketing**](/marketing)       | Materials and templates to help you promote your event.             | Social media templates, event covers     |
 
 

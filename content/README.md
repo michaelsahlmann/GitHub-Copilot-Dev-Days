@@ -74,7 +74,7 @@ These decks are tailored to specific GitHub Copilot product areas. Organizers ca
 ![GitHub Copilot Dev Days Labs](../assets/devdays-labs.gif)
 
 > 🔎 **Highlight**
-> Most workshops are hosted on the GitHub Copilot Dev Days organization site: [copilot-dev-days.github.io](https://copilot-dev-days.github.io)
+> All workshop content is available at **[copilot-dev-days.github.io](https://copilot-dev-days.github.io)**. This is the best link to share with attendees — it displays every available workshop option for GitHub Copilot Dev Days events so participants can navigate directly to the lab for your event.
 
 Workshop content is organized by **technology track**.
 Each track includes the **GitHub Copilot Dev Days – Core Content Session** and one of the **hands-on workshops**.

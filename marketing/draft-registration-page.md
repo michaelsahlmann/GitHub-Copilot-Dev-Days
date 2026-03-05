@@ -71,6 +71,7 @@ Choose the format that best fits your audience, available infrastructure, and ti
 *[Time]* – **Session 2: Community Speaker Session** *[Organizer to add title and description]*
 
 *[Time]* – **Workshop: Hands-on with GitHub Copilot**
+  All workshop content is available at **[copilot-dev-days.github.io](https://copilot-dev-days.github.io)**.
 
 *[Time]* – **Closing & Next Steps**
 
