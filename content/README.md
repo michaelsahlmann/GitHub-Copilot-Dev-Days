@@ -48,25 +48,25 @@ Note: Some events may focus on specific topics (e.g., App Modernization) that ar
 ## ✨ GitHub Copilot Dev Days – Core Content Session
 This session can be used in every GitHub Copilot Dev Days event.
 
-| Name          | Type         | Time      | Description / Concepts Taught | Level         |
-| ------------- | ------------ | --------- | ----------------------------- | ------------- |
-| [**GitHub Copilot: Your AI Companion for Every Workflow**](./GitHub%20Copilot%20Dev%20Days%20Overview.pptx) | Session | ~30 - 60 min | Overview slide deck covering general information about GitHub Copilot. | Beginner |
+| Name          | Type         | Time      | Description / Concepts Taught | Level         | Train the Trainer |
+| ------------- | ------------ | --------- | ----------------------------- | ------------- | ----------------- |
+| [**GitHub Copilot: Your AI Companion for Every Workflow**](./GitHub%20Copilot%20Dev%20Days%20Overview.pptx) | Session | ~30 - 60 min | Overview slide deck covering general information about GitHub Copilot. | Beginner | [▶️ Watch](https://youtu.be/t3D8Gu2lUJw) |
 
 
 ## 🎤 Product-Specific Presentation Decks
 
 These decks are tailored to specific GitHub Copilot product areas. Organizers can select the decks most relevant to their audience and event focus.
 
-| Name | Type | Time | Description / Concepts Taught | Level |
-| ---- | ---- | ---- | ----------------------------- | ----- |
-| [**Agentic Workflows**](./GitHub%20Copilot%20Dev%20Days%20-%20Agentic%20Workflows.pptx) | Session | ~30 min | Agentic workflows and AI-assisted development patterns with GitHub Copilot. | Beginner |
-| [**GitHub Copilot CLI**](./GitHub%20Copilot%20Dev%20Days%20-%20CLI.pptx) | Session | ~30 min | GitHub Copilot CLI in the terminal and command-line workflows. | Beginner |
-| [**GitHub Copilot Cloud Agent**](./GitHub%20Copilot%20Dev%20Days%20-%20Cloud%20Agent.pptx) | Session | ~30 min | GitHub Copilot coding agents for asynchronous, cloud-based development. | Beginner |
-| [**GitHub Copilot SDK**](./GitHub%20Copilot%20Dev%20Days%20-%20Copilot%20SDK.pptx) | Session | ~30 min | Building with the GitHub Copilot SDK and extensibility platform. | Beginner |
-| [**JetBrains and Eclipse**](./GitHub%20Copilot%20Dev%20Days%20-%20JetBrains%20and%20Eclipse.pptx) | Session | ~30 min | GitHub Copilot in JetBrains IDEs and Eclipse. | Beginner |
-| [**VS Code**](./GitHub%20Copilot%20Dev%20Days%20-%20VS%20Code.pptx) | Session | ~30 min | GitHub Copilot in Visual Studio Code. | Beginner |
-| [**Visual Studio**](./GitHub%20Copilot%20Dev%20Days%20-%20Visual%20Studio.pptx) | Session | ~30 min | GitHub Copilot in Visual Studio. | Beginner |
-| [**Xcode**](./GitHub%20Copilot%20Dev%20Days%20-%20Xcode.pptx) | Session | ~30 min | GitHub Copilot for Xcode and Apple developers. | Beginner |
+| Name | Type | Time | Description / Concepts Taught | Level | Train the Trainer |
+| ---- | ---- | ---- | ----------------------------- | ----- | ----------------- |
+| [**Agentic Workflows**](./GitHub%20Copilot%20Dev%20Days%20-%20Agentic%20Workflows.pptx) | Session | ~30 min | Agentic workflows and AI-assisted development patterns with GitHub Copilot. | Beginner | Coming Soon |
+| [**GitHub Copilot CLI**](./GitHub%20Copilot%20Dev%20Days%20-%20CLI.pptx) | Session | ~30 min | GitHub Copilot CLI in the terminal and command-line workflows. | Beginner | Coming Soon |
+| [**GitHub Copilot Cloud Agent**](./GitHub%20Copilot%20Dev%20Days%20-%20Cloud%20Agent.pptx) | Session | ~30 min | GitHub Copilot coding agents for asynchronous, cloud-based development. | Beginner | Coming Soon |
+| [**GitHub Copilot SDK**](./GitHub%20Copilot%20Dev%20Days%20-%20Copilot%20SDK.pptx) | Session | ~30 min | Building with the GitHub Copilot SDK and extensibility platform. | Beginner | Coming Soon |
+| [**JetBrains and Eclipse**](./GitHub%20Copilot%20Dev%20Days%20-%20JetBrains%20and%20Eclipse.pptx) | Session | ~30 min | GitHub Copilot in JetBrains IDEs and Eclipse. | Beginner | Coming Soon |
+| [**VS Code**](./GitHub%20Copilot%20Dev%20Days%20-%20VS%20Code.pptx) | Session | ~30 min | GitHub Copilot in Visual Studio Code. | Beginner | [▶️ Watch](https://youtu.be/eUDx_g_BLeA) |
+| [**Visual Studio**](./GitHub%20Copilot%20Dev%20Days%20-%20Visual%20Studio.pptx) | Session | ~30 min | GitHub Copilot in Visual Studio. | Beginner | Coming Soon |
+| [**Xcode**](./GitHub%20Copilot%20Dev%20Days%20-%20Xcode.pptx) | Session | ~30 min | GitHub Copilot for Xcode and Apple developers. | Beginner | Coming Soon |
 
 
 ## 📚 Content Tracks - Workshops
