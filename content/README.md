@@ -60,7 +60,7 @@ These decks are tailored to specific GitHub Copilot product areas. Organizers ca
 | Name | Type | Time | Description / Concepts Taught | Level | Train the Trainer |
 | ---- | ---- | ---- | ----------------------------- | ----- | ----------------- |
 | [**Agentic Workflows**](./GitHub%20Copilot%20Dev%20Days%20-%20Agentic%20Workflows.pptx) | Session | ~30 min | Agentic workflows and AI-assisted development patterns with GitHub Copilot. | Beginner | Coming Soon |
-| [**GitHub Copilot CLI**](./GitHub%20Copilot%20Dev%20Days%20-%20CLI.pptx) | Session | ~30 min | GitHub Copilot CLI in the terminal and command-line workflows. | Beginner | Coming Soon |
+| [**GitHub Copilot CLI**](./GitHub%20Copilot%20Dev%20Days%20-%20CLI.pptx) | Session | ~30 min | GitHub Copilot CLI in the terminal and command-line workflows. | Beginner | [▶️ Watch](https://youtu.be/09R8j6r--_Y) |
 | [**GitHub Copilot Cloud Agent**](./GitHub%20Copilot%20Dev%20Days%20-%20Cloud%20Agent.pptx) | Session | ~30 min | GitHub Copilot coding agents for asynchronous, cloud-based development. | Beginner | Coming Soon |
 | [**GitHub Copilot SDK**](./GitHub%20Copilot%20Dev%20Days%20-%20Copilot%20SDK.pptx) | Session | ~30 min | Building with the GitHub Copilot SDK and extensibility platform. | Beginner | Coming Soon |
 | [**JetBrains and Eclipse**](./GitHub%20Copilot%20Dev%20Days%20-%20JetBrains%20and%20Eclipse.pptx) | Session | ~30 min | GitHub Copilot in JetBrains IDEs and Eclipse. | Beginner | Coming Soon |
