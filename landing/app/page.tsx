@@ -25,13 +25,16 @@ export default function Home() {
 
       {/* ─── OFFICIAL BANNER ─── */}
       <div className="official-banner">
-        <div className="official-banner-inner">
-          <span className="official-star">✦</span>
-          <span className="official-text">
-            <strong>Primer evento oficial autorizado de GitHub Copilot Dev Days en Paraguay</strong>
-            {' '}— Avalado por el programa global de GitHub
-          </span>
-          <span className="official-star">✦</span>
+        <div className="official-banner-track">
+          {[...Array(6)].map((_, i) => (
+            <div key={i} className="official-banner-inner">
+              <span className="official-star">✦</span>
+              <span className="official-text">
+                <strong>Primer evento oficial autorizado de GitHub Copilot Dev Days en Paraguay</strong>
+                {' '}— Avalado por el programa global de GitHub
+              </span>
+            </div>
+          ))}
         </div>
       </div>
 
@@ -131,6 +134,22 @@ export default function Home() {
             <div className="requirements-text">
               <strong>Requisito para el taller práctico</strong>
               Notebook personal obligatorio, incluyendo su cargador. Asegúrate de traerla completamente cargada.
+            </div>
+          </div>
+
+          <div className="requirements-card" style={{ marginTop: '1.5rem' }}>
+            <span className="requirements-icon">🌎</span>
+            <div className="requirements-text">
+              <strong>¿No estás cerca de Ciudad del Este?</strong>
+              GitHub Copilot Dev Days es un evento global. Busca otras locaciones alrededor del mundo en{' '}
+              <a 
+                href="https://luma.com/githubcopilotdevdays" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                style={{ color: '#58a6ff', textDecoration: 'none', fontWeight: 500 }}
+              >
+                luma.com/githubcopilotdevdays ↗
+              </a>
             </div>
           </div>
 
@@ -406,6 +425,18 @@ export default function Home() {
           </div>
 
           <div className="footer-divider" />
+
+          <p className="footer-copy" style={{ marginBottom: '16px', fontSize: '14px' }}>
+            ¿Tienes dudas sobre el evento?{' '}
+            <a 
+              href="https://wa.me/595981328046" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              style={{ color: '#25D366', textDecoration: 'none', fontWeight: 600 }}
+            >
+              Habla con el organizador por WhatsApp
+            </a>
+          </p>
 
           <p className="footer-copy">
             Organizado por{' '}

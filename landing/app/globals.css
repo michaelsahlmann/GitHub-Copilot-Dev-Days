@@ -95,16 +95,13 @@ body {
 
 /* ─── OFFICIAL BANNER ─── */
 .official-banner {
-  position: sticky;
-  top: 57px;
-  left: 0;
-  right: 0;
-  z-index: 90;
-  /* Purple 6 #160048 + Purple 5 #26115F (official) */
+  position: relative;
+  margin-top: 57px;
   background: linear-gradient(90deg, #160048 0%, #26115F 35%, #1d0a3a 65%, #160048 100%);
   border-top: 1px solid rgba(133, 52, 243, 0.25);
   border-bottom: 1px solid rgba(133, 52, 243, 0.4);
   overflow: hidden;
+  display: flex;
 }
 
 .official-banner::before {
@@ -116,6 +113,8 @@ body {
     rgba(133, 52, 243, 0.18) 50%,
     transparent 100%);
   animation: shimmer 4s linear infinite;
+  z-index: 2;
+  pointer-events: none;
 }
 
 @keyframes shimmer {
@@ -123,15 +122,30 @@ body {
   100% { transform: translateX(100%); }
 }
 
+.official-banner-track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  animation: marquee 35s linear infinite;
+  z-index: 1;
+}
+
+.official-banner:hover .official-banner-track {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
 .official-banner-inner {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  padding: 10px 20px;
-  position: relative;
-  z-index: 1;
-  flex-wrap: wrap;
+  gap: 16px;
+  padding: 10px 16px;
+  flex-shrink: 0;
 }
 
 .official-star {
