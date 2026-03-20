@@ -441,8 +441,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 40px 20px 60px;
+  justify-content: flex-start;
+  padding: 50px 20px 60px;
   background: var(--gradient-hero);
   position: relative;
   overflow: hidden;
@@ -1133,6 +1133,7 @@ body {
 @media (min-width: 768px) {
   .hero {
     padding: 60px 20px 80px;
+    justify-content: center;
   }
 
   .hero-image {
