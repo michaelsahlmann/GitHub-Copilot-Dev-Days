@@ -53,6 +53,7 @@ export default function Home() {
             width={420}
             height={240}
             className="hero-image"
+            style={{ width: '100%', height: 'auto' }}
             priority
           />
         </div>
