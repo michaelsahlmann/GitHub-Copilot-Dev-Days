@@ -343,7 +343,7 @@ export default function Home() {
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '20px', maxWidth: '800px', margin: '0 auto' }}>
             {/* Sponsor Card */}
-            <div className="stat-card" style={{ textAlign: 'left', padding: '28px', border: '1px solid rgba(250, 204, 21, 0.3)', background: 'rgba(250, 204, 21, 0.02)' }}>
+            <div className="stat-card get-involved-sponsor" style={{ textAlign: 'left', padding: '28px' }}>
               <div style={{ fontSize: '32px', marginBottom: '16px' }}>🤝</div>
               <h3 style={{ fontSize: '18px', fontWeight: '800', marginBottom: '10px', color: '#fef08a' }}>Conviértete en Patrocinador</h3>
               <p style={{ fontSize: '14px', color: 'var(--text-secondary)', marginBottom: '24px', lineHeight: '1.6' }}>
@@ -354,14 +354,14 @@ export default function Home() {
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="badge"
-                style={{ background: 'rgba(37, 211, 102, 0.15)', color: '#25D366', border: '1px solid rgba(37, 211, 102, 0.3)', padding: '8px 16px', fontSize: '13px', textDecoration: 'none' }}
+                style={{ background: 'rgba(37, 211, 102, 0.15)', color: '#25D366', border: '1px solid rgba(37, 211, 102, 0.3)', padding: '8px 16px', fontSize: '13px', textDecoration: 'none', transition: 'all 0.2s' }}
               >
                 Contactar por WhatsApp ↗
               </a>
             </div>
 
             {/* Volunteer Card */}
-            <div className="stat-card" style={{ textAlign: 'left', padding: '28px', border: '1px solid rgba(133, 52, 243, 0.3)', background: 'rgba(133, 52, 243, 0.02)' }}>
+            <div className="stat-card get-involved-volunteer" style={{ textAlign: 'left', padding: '28px' }}>
               <div style={{ fontSize: '32px', marginBottom: '16px' }}>⭐</div>
               <h3 style={{ fontSize: '18px', fontWeight: '800', marginBottom: '10px', color: '#ddd6fe' }}>Únete como Voluntario</h3>
               <p style={{ fontSize: '14px', color: 'var(--text-secondary)', marginBottom: '24px', lineHeight: '1.6' }}>
@@ -372,7 +372,7 @@ export default function Home() {
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="badge"
-                style={{ background: 'rgba(37, 211, 102, 0.15)', color: '#25D366', border: '1px solid rgba(37, 211, 102, 0.3)', padding: '8px 16px', fontSize: '13px', textDecoration: 'none' }}
+                style={{ background: 'rgba(37, 211, 102, 0.15)', color: '#25D366', border: '1px solid rgba(37, 211, 102, 0.3)', padding: '8px 16px', fontSize: '13px', textDecoration: 'none', transition: 'all 0.2s' }}
               >
                 Postularse por WhatsApp ↗
               </a>

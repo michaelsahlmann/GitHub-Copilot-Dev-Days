@@ -731,7 +731,7 @@ body {
 /* ─── STATS ─── */
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 16px;
   margin-top: 48px;
 }
@@ -748,6 +748,30 @@ body {
 .stat-card:hover {
   border-color: var(--accent-green);
   transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* ─── GET INVOLVED CARDS ─── */
+.get-involved-sponsor {
+  border: 1px solid rgba(250, 204, 21, 0.3) !important;
+  background: rgba(250, 204, 21, 0.02) !important;
+  transition: all 0.25s ease;
+}
+.get-involved-sponsor:hover {
+  transform: translateY(-4px);
+  border-color: rgba(250, 204, 21, 0.8) !important;
+  box-shadow: 0 12px 30px rgba(250, 204, 21, 0.1);
+}
+
+.get-involved-volunteer {
+  border: 1px solid rgba(133, 52, 243, 0.3) !important;
+  background: rgba(133, 52, 243, 0.02) !important;
+  transition: all 0.25s ease;
+}
+.get-involved-volunteer:hover {
+  transform: translateY(-4px);
+  border-color: rgba(133, 52, 243, 0.8) !important;
+  box-shadow: 0 12px 30px rgba(133, 52, 243, 0.15);
 }
 
 .stat-value {
@@ -1108,7 +1132,7 @@ body {
 /* ─── DESKTOP RESPONSIVE ─── */
 @media (min-width: 768px) {
   .hero {
-    padding: 120px 20px 80px;
+    padding: 60px 20px 80px;
   }
 
   .hero-image {
@@ -1126,7 +1150,7 @@ body {
 
   .stats-grid {
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 24px;
   }
 
   .register-iframe-wrapper {
