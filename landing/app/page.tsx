@@ -30,7 +30,7 @@ export default function Home() {
             <div key={i} className="official-banner-inner">
               <span className="official-star">✦</span>
               <span className="official-text">
-                <strong>Primer evento oficial autorizado de GitHub Copilot Dev Days en Paraguay</strong>
+                <strong>Evento oficial autorizado de GitHub Copilot Dev Days</strong>
                 {' '}— Avalado por el programa global de GitHub
               </span>
             </div>
@@ -81,6 +81,10 @@ export default function Home() {
             <span className="chip-icon">💻</span>
             Presencial
           </span>
+          <span className="chip">
+            <span className="chip-icon">🎓</span>
+            Todos los niveles
+          </span>
         </div>
 
         <div className="hero-cta-group animate-in animate-delay-4">
@@ -112,7 +116,7 @@ export default function Home() {
         <div className="container">
           <div className="section-header">
             <p className="section-eyebrow">Sobre el evento</p>
-            <h2 className="section-title">Transformando el desarrollo<br/>con Inteligencia Artificial</h2>
+            <h2 className="section-title">Transformando el desarrollo<br />con Inteligencia Artificial</h2>
           </div>
 
           <p className="about-content">
@@ -142,14 +146,22 @@ export default function Home() {
             <div className="requirements-text">
               <strong>¿No estás cerca de Ciudad del Este?</strong>
               GitHub Copilot Dev Days es un evento global. Busca otras locaciones alrededor del mundo en{' '}
-              <a 
-                href="https://luma.com/githubcopilotdevdays" 
-                target="_blank" 
-                rel="noopener noreferrer" 
+              <a
+                href="https://luma.com/githubcopilotdevdays"
+                target="_blank"
+                rel="noopener noreferrer"
                 style={{ color: '#58a6ff', textDecoration: 'none', fontWeight: 500 }}
               >
                 luma.com/githubcopilotdevdays ↗
               </a>
+            </div>
+          </div>
+
+          <div className="requirements-card" style={{ marginTop: '1.5rem', borderLeftColor: 'var(--accent-purple)', backgroundColor: 'rgba(133, 52, 243, 0.05)' }}>
+            <span className="requirements-icon">🎓</span>
+            <div className="requirements-text">
+              <strong>Para todos los niveles de experiencia</strong>
+              Desde principiantes que no saben nada sobre IA o GitHub Copilot, hasta desarrolladores avanzados. ¡Todos son bienvenidos a aprender!
             </div>
           </div>
 
@@ -318,6 +330,57 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ─── VOLUNTEERS & SPONSORS ─── */}
+      <section className="section get-involved-section" style={{ background: 'var(--bg-secondary)', borderTop: '1px solid var(--border-muted)' }}>
+        <div className="container">
+          <div className="section-header">
+            <p className="section-eyebrow">Sponsors & Voluntarios</p>
+            <h2 className="section-title">Sé parte de la iniciativa</h2>
+            <p className="section-subtitle">
+              Ya sea sumándote como voluntario pionero o apoyando el evento como patrocinador, hay un espacio para ti.
+            </p>
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '20px', maxWidth: '800px', margin: '0 auto' }}>
+            {/* Sponsor Card */}
+            <div className="stat-card" style={{ textAlign: 'left', padding: '28px', border: '1px solid rgba(250, 204, 21, 0.3)', background: 'rgba(250, 204, 21, 0.02)' }}>
+              <div style={{ fontSize: '32px', marginBottom: '16px' }}>🤝</div>
+              <h3 style={{ fontSize: '18px', fontWeight: '800', marginBottom: '10px', color: '#fef08a' }}>Conviértete en Patrocinador</h3>
+              <p style={{ fontSize: '14px', color: 'var(--text-secondary)', marginBottom: '24px', lineHeight: '1.6' }}>
+                Apoya a la comunidad tecnológica local y conecta tu marca con líderes y desarrolladores apasionados por la Inteligencia Artificial y el futuro del código.
+              </p>
+              <a 
+                href="https://wa.me/595981328046" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="badge"
+                style={{ background: 'rgba(37, 211, 102, 0.15)', color: '#25D366', border: '1px solid rgba(37, 211, 102, 0.3)', padding: '8px 16px', fontSize: '13px', textDecoration: 'none' }}
+              >
+                Contactar por WhatsApp ↗
+              </a>
+            </div>
+
+            {/* Volunteer Card */}
+            <div className="stat-card" style={{ textAlign: 'left', padding: '28px', border: '1px solid rgba(133, 52, 243, 0.3)', background: 'rgba(133, 52, 243, 0.02)' }}>
+              <div style={{ fontSize: '32px', marginBottom: '16px' }}>⭐</div>
+              <h3 style={{ fontSize: '18px', fontWeight: '800', marginBottom: '10px', color: '#ddd6fe' }}>Únete como Voluntario</h3>
+              <p style={{ fontSize: '14px', color: 'var(--text-secondary)', marginBottom: '24px', lineHeight: '1.6' }}>
+                Sé pionero en este evento único. Obtendrás acceso exclusivo a oportunidades de networking, contactos clave y muchísimos otros beneficios especiales.
+              </p>
+              <a 
+                href="https://wa.me/595981328046" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="badge"
+                style={{ background: 'rgba(37, 211, 102, 0.15)', color: '#25D366', border: '1px solid rgba(37, 211, 102, 0.3)', padding: '8px 16px', fontSize: '13px', textDecoration: 'none' }}
+              >
+                Postularse por WhatsApp ↗
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ─── REGISTER ─── */}
       <section className="section register-section" id="registro">
         <div className="container">
@@ -325,7 +388,7 @@ export default function Home() {
             <p className="section-eyebrow">Inscripción gratuita</p>
             <h2 className="section-title">¡Reservá tu lugar ahora!</h2>
             <p className="section-subtitle">
-              Entrada 100% gratuita. Solo necesitás confirmar tu asistencia.<br/>
+              Entrada 100% gratuita. Solo necesitás confirmar tu asistencia.<br />
               Recibirás un email de confirmación con todos los detalles.
             </p>
           </div>
@@ -428,10 +491,10 @@ export default function Home() {
 
           <p className="footer-copy" style={{ marginBottom: '16px', fontSize: '14px' }}>
             ¿Tienes dudas sobre el evento?{' '}
-            <a 
-              href="https://wa.me/595981328046" 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            <a
+              href="https://wa.me/595981328046"
+              target="_blank"
+              rel="noopener noreferrer"
               style={{ color: '#25D366', textDecoration: 'none', fontWeight: 600 }}
             >
               Habla con el organizador por WhatsApp
