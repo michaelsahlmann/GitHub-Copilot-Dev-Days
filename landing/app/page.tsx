@@ -166,6 +166,14 @@ export default function Home() {
             </div>
           </div>
 
+          <div className="requirements-card" style={{ marginTop: '1.5rem', borderLeftColor: 'var(--accent-green)', backgroundColor: 'rgba(46, 160, 67, 0.05)' }}>
+            <span className="requirements-icon">🌟</span>
+            <div className="requirements-text">
+              <strong>Un esfuerzo 100% voluntario para la comunidad</strong>
+              Este evento es organizado de manera totalmente gratuita y voluntaria por <strong>Michael Sahlmann</strong>, con el objetivo de democratizar el acceso a la IA en Paraguay. Además, el espacio físico ha sido cedido gentilmente por <strong>Mi LAB - Hub de Innovación Colaborativo</strong>, quienes abren sus puertas para hacer posible este encuentro sin costo.
+            </div>
+          </div>
+
           <div className="stats-grid">
             <div className="stat-card">
               <div className="stat-value">9h</div>
@@ -234,7 +242,7 @@ export default function Home() {
             <div className="timeline-item">
               <div className="timeline-dot">⚗️</div>
               <div className="timeline-content">
-                <div className="timeline-time">10:00 hs</div>
+                <div className="timeline-time">11:00 hs</div>
                 <div className="timeline-title">Laboratorio práctico</div>
                 <div className="timeline-desc">Ejercicios guiados usando GitHub Copilot en escenarios reales.</div>
               </div>
@@ -301,10 +309,13 @@ export default function Home() {
             />
             <div className="location-details">
               <div className="location-info-row">
-                <span className="location-info-icon">📌</span>
+                <span className="location-info-icon">🏢</span>
                 <div>
-                  <div className="location-info-title">Lugar del evento</div>
+                  <div className="location-info-title">Venue Sponsor (Patrocinador de Espacio)</div>
                   <div className="location-info-value">Mi LAB - Hub de Innovación Colaborativo</div>
+                  <div className="location-info-sub" style={{ fontStyle: 'italic', marginBottom: '4px' }}>
+                    Agradecemos a Mi LAB por brindar sus instalaciones sin costo para la comunidad.
+                  </div>
                   <div className="location-info-sub">Plaza City · Km 8, Ciudad del Este 7000, Paraguay</div>
                 </div>
               </div>
@@ -503,10 +514,10 @@ export default function Home() {
           </p>
 
           <p className="footer-copy">
-            Organizado por{' '}
-            <a href="mailto:michelsd12@gmail.com">Michael Sahlmann</a>
-            {' '}·{' '}
-            Ciudad del Este, Paraguay<br />
+            Organizado de forma 100% voluntaria y <em>pro bono</em> por{' '}
+            <a href="mailto:michelsd12@gmail.com">Michael Sahlmann</a>{' '}
+            para la comunidad tecnológica. Espacio físico provisto por <strong>Mi LAB</strong>{' '}
+            · Ciudad del Este, Paraguay<br />
             GitHub Copilot Dev Days es una iniciativa global de comunidad · Marzo–Mayo 2026
           </p>
         </div>
