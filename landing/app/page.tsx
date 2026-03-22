@@ -1,5 +1,15 @@
 import Image from 'next/image'
-/* eslint-disable @next/next/no-img-element */
+
+// Regla 6.3: JSX estático hoisted fuera del componente para evitar recreación en cada render
+const BANNER_ITEMS = Array.from({ length: 6 }, (_, i) => (
+  <div key={i} className="official-banner-inner">
+    <span className="official-star">✦</span>
+    <span className="official-text">
+      <strong>Evento oficial autorizado de GitHub Copilot Dev Days</strong>
+      {' '}— Avalado por el programa global de GitHub
+    </span>
+  </div>
+))
 
 export default function Home() {
   return (
@@ -7,9 +17,11 @@ export default function Home() {
       {/* ─── NAV ─── */}
       <nav className="nav">
         <a href="#" className="nav-logo">
-          <img
+          <Image
             src="/github-copilot-dev-days.png"
             alt="GitHub Copilot Dev Days"
+            width={420}
+            height={240}
             style={{ height: '28px', width: 'auto', objectFit: 'contain' }}
           />
         </a>
@@ -26,15 +38,7 @@ export default function Home() {
       {/* ─── OFFICIAL BANNER ─── */}
       <div className="official-banner">
         <div className="official-banner-track">
-          {[...Array(6)].map((_, i) => (
-            <div key={i} className="official-banner-inner">
-              <span className="official-star">✦</span>
-              <span className="official-text">
-                <strong>Evento oficial autorizado de GitHub Copilot Dev Days</strong>
-                {' '}— Avalado por el programa global de GitHub
-              </span>
-            </div>
-          ))}
+          {BANNER_ITEMS}
         </div>
       </div>
 
@@ -436,10 +440,9 @@ export default function Home() {
               src="https://luma.com/embed/event/evt-m1xp6Y25jC1Dix9/simple"
               width="600"
               height="500"
-              frameBorder="0"
+              loading="lazy"
               style={{ border: '1px solid #30363d', borderRadius: '12px' }}
               allow="fullscreen; payment"
-              aria-hidden={false}
               tabIndex={0}
               title="Inscripción al evento en Luma"
             />
@@ -466,9 +469,11 @@ export default function Home() {
       {/* ─── FOOTER ─── */}
       <footer className="footer">
         <div className="container">
-          <img
+          <Image
             src="/github-copilot-dev-days.png"
             alt="GitHub Copilot Dev Days"
+            width={420}
+            height={240}
             style={{ height: '28px', width: 'auto', objectFit: 'contain', margin: '0 auto 16px', display: 'block', opacity: 0.6 }}
           />
 
