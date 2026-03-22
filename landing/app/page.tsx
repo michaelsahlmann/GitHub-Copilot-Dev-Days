@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import SoldOutModal from './components/SoldOutModal'
 
 // Regla 6.3: JSX estático hoisted fuera del componente para evitar recreación en cada render
 const BANNER_ITEMS = Array.from({ length: 6 }, (_, i) => (
@@ -14,6 +15,8 @@ const BANNER_ITEMS = Array.from({ length: 6 }, (_, i) => (
 export default function Home() {
   return (
     <>
+      <SoldOutModal />
+
       {/* ─── NAV ─── */}
       <nav className="nav">
         <a href="#" className="nav-logo">
@@ -31,7 +34,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Inscribirme ↗
+          Lista de espera ↗
         </a>
       </nav>
 
@@ -99,13 +102,13 @@ export default function Home() {
             data-luma-action="checkout"
             data-luma-event-id="evt-m1xp6Y25jC1Dix9"
           >
-            🚀 Reservar mi lugar gratis
+            🔔 Unirme a la lista de espera
           </a>
         </div>
 
         <div className="hero-scarcity animate-in animate-delay-4">
           <span className="scarcity-dot" />
-          <span>Cupos limitados · Confirmación requerida vía email</span>
+          <span>Cupos agotados · Lista de espera disponible</span>
         </div>
 
         <a
@@ -264,7 +267,7 @@ export default function Home() {
             <div className="timeline-item">
               <div className="timeline-dot">🛠️</div>
               <div className="timeline-content">
-                <div className="timeline-time">15:30 hs</div>
+                <div className="timeline-time">14:30 hs</div>
                 <div className="timeline-title">Taller Hands-on</div>
                 <div className="timeline-desc">
                   Workshop intensivo. Todo el contenido disponible en{' '}
@@ -277,6 +280,24 @@ export default function Home() {
                     copilot-dev-days.github.io ↗
                   </a>
                 </div>
+              </div>
+            </div>
+
+            <div className="timeline-item">
+              <div className="timeline-dot">🙋</div>
+              <div className="timeline-content">
+                <div className="timeline-time">15:30 hs</div>
+                <div className="timeline-title">Rueda de Preguntas y Respuestas</div>
+                <div className="timeline-desc">Espacio abierto para resolver dudas, compartir experiencias y profundizar sobre los temas del día.</div>
+              </div>
+            </div>
+
+            <div className="timeline-item">
+              <div className="timeline-dot">🎁</div>
+              <div className="timeline-content">
+                <div className="timeline-time">16:40 hs</div>
+                <div className="timeline-title">Sorteos y Sorpresas</div>
+                <div className="timeline-desc">¡No te vayas antes de tiempo! Sorteos especiales y sorpresas para los asistentes.</div>
               </div>
             </div>
 
@@ -401,11 +422,11 @@ export default function Home() {
       <section className="section register-section" id="registro">
         <div className="container">
           <div className="section-header">
-            <p className="section-eyebrow">Inscripción gratuita</p>
-            <h2 className="section-title">¡Reservá tu lugar ahora!</h2>
+            <p className="section-eyebrow">Lista de espera</p>
+            <h2 className="section-title">¡Únete a la lista de espera!</h2>
             <p className="section-subtitle">
-              Entrada 100% gratuita. Solo necesitás confirmar tu asistencia.<br />
-              Recibirás un email de confirmación con todos los detalles.
+              Los cupos se agotaron, pero aún puedes anotarte en la lista de espera.<br />
+              Si un lugar se libera, recibirás un email de confirmación con todos los detalles.
             </p>
           </div>
 
@@ -414,8 +435,8 @@ export default function Home() {
             <div className="urgency-card urgency-limited">
               <span className="urgency-icon">⚡</span>
               <div>
-                <div className="urgency-title">Cupos Limitados</div>
-                <div className="urgency-desc">El espacio físico tiene capacidad limitada. Asegurá tu lugar cuanto antes.</div>
+                <div className="urgency-title">Cupos Agotados</div>
+                <div className="urgency-desc">Los cupos se agotaron de forma extraordinaria. Anótate en la lista de espera.</div>
               </div>
             </div>
             <div className="urgency-card urgency-confirm">
@@ -457,10 +478,10 @@ export default function Home() {
               data-luma-event-id="evt-m1xp6Y25jC1Dix9"
               style={{ maxWidth: '380px', width: '100%' }}
             >
-              🚀 Reservar mi lugar gratis
+              🔔 Unirme a la lista de espera
             </a>
             <span className="register-note">
-              🔒 Gratuito · Confirmación por email · Cupos limitados
+              🔒 Gratuito · Confirmación por email · Lista de espera
             </span>
           </div>
         </div>

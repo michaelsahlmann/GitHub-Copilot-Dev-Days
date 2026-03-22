@@ -1193,3 +1193,196 @@ body {
 .animate-delay-2 { animation-delay: 0.2s; }
 .animate-delay-3 { animation-delay: 0.3s; }
 .animate-delay-4 { animation-delay: 0.4s; }
+
+/* ─── SOLD OUT MODAL ─── */
+@keyframes backdropFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes modalSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.soldout-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: rgba(10, 12, 16, 0.85);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  animation: backdropFadeIn 0.3s ease forwards;
+}
+
+.soldout-container {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  max-height: 90vh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background: var(--bg-card);
+  border: 1px solid var(--border-default);
+  border-radius: 16px;
+  border-top: 3px solid transparent;
+  background-clip: padding-box;
+  padding: 36px 32px 32px;
+  text-align: center;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
+  animation: modalSlideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  outline: none;
+
+  /* Borde superior con gradiente purple → green */
+  background-image: linear-gradient(var(--bg-card), var(--bg-card)),
+    linear-gradient(90deg, var(--accent-purple), var(--accent-green));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.soldout-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(133, 52, 243, 0.12);
+  border: 1px solid rgba(133, 52, 243, 0.25);
+  margin: 0 auto 20px;
+}
+
+.soldout-icon {
+  width: 28px;
+  height: 28px;
+  color: var(--accent-purple);
+}
+
+.soldout-badge {
+  display: inline-block;
+  max-width: 100%;
+  background: rgba(15, 191, 62, 0.12);
+  color: var(--accent-green);
+  border: 1px solid rgba(15, 191, 62, 0.3);
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 4px 12px;
+  margin-bottom: 16px;
+  white-space: normal;
+  word-break: break-word;
+}
+
+.soldout-title {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 0 0 20px;
+  line-height: 1.2;
+}
+
+.soldout-body {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.soldout-body p {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin: 0 0 12px;
+}
+
+.soldout-body p:last-child {
+  margin-bottom: 0;
+}
+
+.soldout-body strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.soldout-highlight {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  text-align: left;
+  background: rgba(15, 191, 62, 0.05);
+  border: 1px solid rgba(15, 191, 62, 0.2);
+  border-left: 3px solid var(--accent-green);
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-bottom: 28px;
+}
+
+.soldout-highlight-icon {
+  font-size: 18px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.soldout-highlight p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.soldout-highlight strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.soldout-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 13px 24px;
+  background: linear-gradient(135deg, var(--accent-purple), #6920d4);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: 0.01em;
+}
+
+.soldout-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(133, 52, 243, 0.4);
+  background: linear-gradient(135deg, #9b4fff, var(--accent-purple));
+}
+
+.soldout-btn:focus-visible {
+  outline: 2px solid var(--accent-purple);
+  outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+  .soldout-container {
+    padding: 28px 20px 24px;
+    border-radius: 14px;
+  }
+
+  .soldout-title {
+    font-size: 22px;
+  }
+
+  .soldout-body p {
+    font-size: 14px;
+  }
+}
