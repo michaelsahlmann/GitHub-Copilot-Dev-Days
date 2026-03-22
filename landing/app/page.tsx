@@ -205,7 +205,7 @@ export default function Home() {
             <p className="section-eyebrow">Agenda del día</p>
             <h2 className="section-title">¿Qué vamos a hacer?</h2>
             <p className="section-subtitle">
-              Sábado 25 de Abril · 08:00 a 17:00 · Sujeto a modificaciones
+              Sábado 25 de Abril · 08:00 a 17:00 · <span style={{ color: '#f85149', fontWeight: 600 }}>⚠ Sujeto a modificaciones</span>
             </p>
           </div>
 
@@ -247,11 +247,29 @@ export default function Home() {
             </div>
 
             <div className="timeline-item">
+              <div className="timeline-dot">☕</div>
+              <div className="timeline-content">
+                <div className="timeline-time">10:45 hs</div>
+                <div className="timeline-title">Coffee Break & Bocaditos</div>
+                <div className="timeline-desc">Pausa para recargar energías. Café, snacks y refrigerios disponibles para todos los asistentes.</div>
+              </div>
+            </div>
+
+            <div className="timeline-item">
               <div className="timeline-dot">⚗️</div>
               <div className="timeline-content">
                 <div className="timeline-time">11:00 hs</div>
                 <div className="timeline-title">Laboratorio práctico</div>
                 <div className="timeline-desc">Ejercicios guiados usando GitHub Copilot en escenarios reales.</div>
+              </div>
+            </div>
+
+            <div className="timeline-item">
+              <div className="timeline-dot">🍽️</div>
+              <div className="timeline-content">
+                <div className="timeline-time">12:00 hs</div>
+                <div className="timeline-title">Pausa para Almorzar & Networking</div>
+                <div className="timeline-desc">Momento libre para almorzar. Plaza City cuenta con variedad de locales gastronómicos dentro y en sus alrededores — ideal para seguir haciendo networking.</div>
               </div>
             </div>
 
@@ -289,6 +307,15 @@ export default function Home() {
                 <div className="timeline-time">15:30 hs</div>
                 <div className="timeline-title">Rueda de Preguntas y Respuestas</div>
                 <div className="timeline-desc">Espacio abierto para resolver dudas, compartir experiencias y profundizar sobre los temas del día.</div>
+              </div>
+            </div>
+
+            <div className="timeline-item">
+              <div className="timeline-dot">☕</div>
+              <div className="timeline-content">
+                <div className="timeline-time">16:10 hs</div>
+                <div className="timeline-title">Snack & Break de la tarde</div>
+                <div className="timeline-desc">Segunda ronda de café, refrigerios y snacks. Recargá energías antes del cierre del evento.</div>
               </div>
             </div>
 
