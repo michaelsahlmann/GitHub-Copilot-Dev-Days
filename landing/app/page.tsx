@@ -20,9 +20,9 @@ export default function Home() {
           <Image
             src="/github-copilot-dev-days.png"
             alt="GitHub Copilot Dev Days"
-            width={420}
-            height={240}
-            style={{ height: '28px', width: 'auto', objectFit: 'contain' }}
+            width={49}
+            height={28}
+            priority
           />
         </a>
         <a
@@ -472,9 +472,9 @@ export default function Home() {
           <Image
             src="/github-copilot-dev-days.png"
             alt="GitHub Copilot Dev Days"
-            width={420}
-            height={240}
-            style={{ height: '28px', width: 'auto', objectFit: 'contain', margin: '0 auto 16px', display: 'block', opacity: 0.6 }}
+            width={49}
+            height={28}
+            style={{ margin: '0 auto 16px', display: 'block', opacity: 0.6 }}
           />
 
           <div className="footer-links">
