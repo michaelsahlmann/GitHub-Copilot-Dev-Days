@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brief Remera — GitHub Copilot Dev Days 2026</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #f5f5f5;
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+
+        .page {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        .header {
+            background: #0d1117;
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .header p {
+            font-size: 16px;
+            color: #8b949e;
+        }
+
+        .header .event-date {
+            display: inline-block;
+            background: #0FBF3E;
+            color: #000;
+            padding: 4px 16px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 14px;
+            margin-top: 12px;
+        }
+
+        /* Content */
+        .content {
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #0d1117;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .section h2 .num {
+            background: #0d1117;
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+
+        /* T-shirt mockup */
+        .mockup-container {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .tshirt-mockup {
+            position: relative;
+            width: 300px;
+            height: 360px;
+            flex-shrink: 0;
+        }
+
+        .tshirt-svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .mockup-label {
+            text-align: center;
+            margin-top: 8px;
+            font-size: 13px;
+            color: #666;
+            font-weight: 500;
+        }
+
+        .mockup-notes {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .mockup-notes ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .mockup-notes li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 14px;
+        }
+
+        .mockup-notes li:last-child {
+            border-bottom: none;
+        }
+
+        .mockup-notes li strong {
+            color: #0d1117;
+        }
+
+        .highlight {
+            background: #fff8e1;
+            border-left: 4px solid #ffc107;
+            padding: 12px 16px;
+            border-radius: 0 8px 8px 0;
+            margin: 16px 0;
+            font-size: 14px;
+        }
+
+        /* Logo reference */
+        .logo-ref {
+            background: #f8f9fa;
+            border: 2px dashed #dee2e6;
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+            margin: 16px 0;
+        }
+
+        .logo-ref img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .logo-ref .caption {
+            margin-top: 12px;
+            font-size: 13px;
+            color: #666;
+        }
+
+        .logo-ref .arrow {
+            color: #e53e3e;
+            font-weight: 700;
+            font-size: 15px;
+            margin-top: 8px;
+        }
+
+        /* Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            font-size: 14px;
+        }
+
+        th {
+            background: #0d1117;
+            color: white;
+            padding: 10px 16px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 10px 16px;
+            border-bottom: 1px solid #eee;
+        }
+
+        tr:nth-child(even) td {
+            background: #f8f9fa;
+        }
+
+        .total-row td {
+            font-weight: 700;
+            border-top: 2px solid #0d1117;
+            background: #f0f0f0 !important;
+        }
+
+        /* Checklist */
+        .checklist {
+            list-style: none;
+            padding: 0;
+        }
+
+        .checklist li {
+            padding: 8px 0;
+            padding-left: 28px;
+            position: relative;
+            font-size: 14px;
+        }
+
+        .checklist li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 18px;
+            height: 18px;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+        }
+
+        /* Footer */
+        .footer {
+            background: #0d1117;
+            color: #8b949e;
+            padding: 20px 40px;
+            text-align: center;
+            font-size: 12px;
+        }
+
+        /* Print styles */
+        @media print {
+            body {
+                background: white;
+            }
+            .page {
+                box-shadow: none;
+            }
+            .header {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            th {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .content {
+                padding: 20px;
+            }
+            .header {
+                padding: 24px;
+            }
+            .mockup-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <!-- Header -->
+        <div class="header">
+            <h1>Brief de Remera</h1>
+            <p>GitHub Copilot Dev Days — Ciudad del Este, Paraguay</p>
+            <span class="event-date">25 de Abril de 2026</span>
+        </div>
+
+        <div class="content">
+
+            <!-- 1. Diseño -->
+            <div class="section">
+                <h2><span class="num">1</span> Diseño</h2>
+
+                <div class="mockup-container">
+                    <!-- T-shirt SVG mockup -->
+                    <div>
+                        <div class="tshirt-mockup">
+                            <svg viewBox="0 0 300 360" xmlns="http://www.w3.org/2000/svg" class="tshirt-svg">
+                                <!-- T-shirt shape -->
+                                <path d="M60,0 L100,0 Q120,30 150,30 Q180,30 200,0 L240,0 L300,60 L260,100 L230,80 L230,350 Q230,360 220,360 L80,360 Q70,360 70,350 L70,80 L40,100 L0,60 Z"
+                                      fill="white" stroke="#ccc" stroke-width="2"/>
+
+                                <!-- Collar -->
+                                <path d="M100,0 Q120,25 150,25 Q180,25 200,0"
+                                      fill="none" stroke="#ddd" stroke-width="2"/>
+
+                                <!-- Logo area indicator (pecho izquierdo) -->
+                                <rect x="82" y="75" width="80" height="50" rx="4"
+                                      fill="none" stroke="#e53e3e" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+                                <!-- Octocat icon (simplified) -->
+                                <circle cx="95" cy="90" r="7" fill="#1a1a1a"/>
+                                <path d="M90,86 Q90,82 95,82 Q100,82 100,86" fill="#1a1a1a"/>
+                                <circle cx="93" cy="89" r="1.2" fill="white"/>
+                                <circle cx="97" cy="89" r="1.2" fill="white"/>
+
+                                <!-- GitHub Copilot text -->
+                                <text x="105" y="92" font-family="Inter, sans-serif" font-size="7" font-weight="700" fill="#1a1a1a">GitHub Copilot</text>
+
+                                <!-- Dev Days text -->
+                                <text x="105" y="104" font-family="Inter, sans-serif" font-size="6.5" font-weight="600" fill="#1a1a1a">Dev Days</text>
+
+                                <!-- Arrow pointing to logo -->
+                                <line x1="175" y1="85" x2="165" y2="92" stroke="#e53e3e" stroke-width="1.5"/>
+                                <polygon points="165,92 169,88 168,94" fill="#e53e3e"/>
+                                <text x="177" y="82" font-family="Inter, sans-serif" font-size="7" fill="#e53e3e" font-weight="600">~10-12cm</text>
+                                <text x="177" y="92" font-family="Inter, sans-serif" font-size="6" fill="#e53e3e">Pecho izquierdo</text>
+
+                                <!-- "FRENTE" label -->
+                                <text x="150" y="340" font-family="Inter, sans-serif" font-size="10" fill="#999" text-anchor="middle" font-weight="600">FRENTE</text>
+                            </svg>
+                        </div>
+                        <div class="mockup-label">Mockup de ubicación del logo</div>
+                    </div>
+
+                    <!-- Back mockup -->
+                    <div>
+                        <div class="tshirt-mockup">
+                            <svg viewBox="0 0 300 360" xmlns="http://www.w3.org/2000/svg" class="tshirt-svg">
+                                <!-- T-shirt shape (back) -->
+                                <path d="M60,0 L100,0 Q120,20 150,20 Q180,20 200,0 L240,0 L300,60 L260,100 L230,80 L230,350 Q230,360 220,360 L80,360 Q70,360 70,350 L70,80 L40,100 L0,60 Z"
+                                      fill="white" stroke="#ccc" stroke-width="2"/>
+
+                                <!-- Back collar line -->
+                                <path d="M100,0 Q120,15 150,15 Q180,15 200,0"
+                                      fill="none" stroke="#ddd" stroke-width="2"/>
+
+                                <!-- "Sin estampado" text -->
+                                <text x="150" y="190" font-family="Inter, sans-serif" font-size="11" fill="#ccc" text-anchor="middle" font-weight="500">Sin estampado</text>
+
+                                <!-- Checkmark -->
+                                <circle cx="150" cy="215" r="12" fill="none" stroke="#0FBF3E" stroke-width="2"/>
+                                <path d="M143,215 L148,220 L157,210" fill="none" stroke="#0FBF3E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+                                <!-- "ESPALDA" label -->
+                                <text x="150" y="340" font-family="Inter, sans-serif" font-size="10" fill="#999" text-anchor="middle" font-weight="600">ESPALDA</text>
+                            </svg>
+                        </div>
+                        <div class="mockup-label">Espalda limpia</div>
+                    </div>
+                </div>
+
+                <div class="mockup-notes" style="margin-top: 24px;">
+                    <ul>
+                        <li><strong>Ubicaci&oacute;n:</strong> Pecho izquierdo, peque&ntilde;o (~10-12cm de ancho)</li>
+                        <li><strong>Color del estampado:</strong> Negro (1 solo color)</li>
+                        <li><strong>Elementos:</strong> Logo oficial de GitHub Copilot (Octocat + texto) con &ldquo;Dev Days&rdquo; debajo</li>
+                        <li><strong>Espalda:</strong> Completamente limpia, sin estampado</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 2. Logo de referencia -->
+            <div class="section">
+                <h2><span class="num">2</span> Logo de Referencia</h2>
+
+                <div class="logo-ref">
+                    <img src="https://brand.github.com/_next/static/media/copilot-01.0e1505e6.png"
+                         alt="GitHub Copilot Logo Lockups"
+                         onerror="this.parentElement.innerHTML='<p style=&quot;color:#999;padding:20px&quot;>No se pudo cargar la imagen.<br>Ver: brand.github.com/brand-identity/copilot</p>'"/>
+                    <p class="arrow">&#8595; USAR ESTA VARIANTE (la de abajo: &ldquo;GitHub Copilot&rdquo; completo)</p>
+                    <p class="caption">
+                        Fuente: <a href="https://brand.github.com/brand-identity/copilot" target="_blank">brand.github.com/brand-identity/copilot</a><br>
+                        Expanded Lockup = Octocat + &ldquo;GitHub Copilot&rdquo;
+                    </p>
+                </div>
+
+                <div class="highlight">
+                    <strong>Importante:</strong> El texto &ldquo;Dev Days&rdquo; se agrega debajo del logo oficial, en la misma tipograf&iacute;a (o similar sans-serif bold), mismo color negro, tama&ntilde;o un poco m&aacute;s peque&ntilde;o. NO forma parte del logo original.
+                </div>
+            </div>
+
+            <!-- 3. Especificaciones -->
+            <div class="section">
+                <h2><span class="num">3</span> Especificaciones de la Remera</h2>
+
+                <table>
+                    <tr>
+                        <th>Aspecto</th>
+                        <th>Detalle</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Color de la remera</strong></td>
+                        <td>Blanca</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Color del estampado</strong></td>
+                        <td>Negro (1 solo color)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Material</strong></td>
+                        <td>Algod&oacute;n, buena calidad, que no sea transparente</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cuello</strong></td>
+                        <td>Redondo</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cantidad total</strong></td>
+                        <td><strong>5 unidades</strong></td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- 4. Talles -->
+            <div class="section">
+                <h2><span class="num">4</span> Talles</h2>
+
+                <table>
+                    <tr>
+                        <th>Cantidad</th>
+                        <th>Talle</th>
+                        <th>Para qui&eacute;n</th>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td><strong>M</strong></td>
+                        <td>Equipo general</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td><strong>G</strong></td>
+                        <td>Equipo general</td>
+                    </tr>
+                    <tr class="total-row">
+                        <td>5</td>
+                        <td colspan="2"><strong>Total</strong></td>
+                    </tr>
+                </table>
+
+                <div class="highlight">
+                    <strong>Criterio:</strong> Mejor que sobre a que falte. Se eligieron talles generosos para que todos est&eacute;n c&oacute;modos.
+                </div>
+            </div>
+
+            <!-- 5. Checklist -->
+            <div class="section">
+                <h2><span class="num">5</span> Checklist</h2>
+
+                <ul class="checklist">
+                    <li>Confirmar talles con cada persona del equipo</li>
+                    <li>Conseguir el logo en buena calidad/resoluci&oacute;n para el estampador</li>
+                    <li>Pedir ver una muestra antes de hacer las 5</li>
+                    <li>Retirar antes del <strong>24 de abril de 2026</strong></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>GitHub Copilot Dev Days 2026 &mdash; Ciudad del Este, Paraguay &mdash; 25 de Abril</p>
+        </div>
+    </div>
+</body>
+</html>

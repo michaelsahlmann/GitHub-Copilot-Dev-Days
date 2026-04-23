@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Credenciales — GitHub Copilot Dev Days</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+<style>
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Mona Sans', 'Segoe UI', system-ui, -apple-system, sans-serif;
+    font-feature-settings: "ss01", "ss02";
+    background: #f4f4f6;
+  }
+
+  .page {
+    width: 21cm;
+    height: 29.7cm;
+    margin: 1cm auto;
+    display: grid;
+    grid-template-columns: repeat(3, 7cm);
+    grid-template-rows: repeat(3, 9.9cm);
+    background: white;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.12);
+    justify-content: center;
+    align-content: center;
+    gap: 0;
+  }
+
+  @media print {
+    body { background: white; }
+    .page {
+      margin: 0;
+      box-shadow: none;
+      page-break-after: always;
+    }
+    .toolbar { display: none !important; }
+  }
+
+  .credential {
+    width: 7cm;
+    height: 9.9cm;
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    color: #1a1a1a;
+    border: 1px dashed #d0d0d0;
+  }
+
+  .corner {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    z-index: 2;
+  }
+  .corner-tl {
+    top: 10px; left: 6px;
+    border-top: 2px solid #1a1a1a;
+    border-left: 2px solid #1a1a1a;
+  }
+  .corner-tr {
+    top: 10px; right: 6px;
+    border-top: 2px solid #1a1a1a;
+    border-right: 2px solid #1a1a1a;
+  }
+  .corner-bl {
+    bottom: 6px; left: 6px;
+    border-bottom: 2px solid #1a1a1a;
+    border-left: 2px solid #1a1a1a;
+  }
+  .corner-br {
+    bottom: 6px; right: 6px;
+    border-bottom: 2px solid #1a1a1a;
+    border-right: 2px solid #1a1a1a;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding: 1.2cm 0.5cm 0.45cm;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+  }
+
+  .github-mark { width: 52px; height: 52px; }
+
+  .copilot-text { height: 18px; margin-top: 7px; }
+
+  .event-name {
+    font-size: 15pt;
+    font-weight: 800;
+    font-variant-ligatures: none;
+    color: #0FBF3E;
+    margin-top: 8px;
+    line-height: 1.1;
+  }
+
+  .event-sub {
+    font-size: 7pt;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #8534F3;
+    font-weight: 600;
+    margin-top: 3px;
+  }
+
+  .sep {
+    width: 2cm;
+    height: 0.5px;
+    background: #1a1a1a;
+  }
+
+  .name-zone {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+  }
+
+  .name-field {
+    width: 100%;
+    border-bottom: 1.2px solid #1a1a1a;
+    min-height: 1.4cm;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 4px;
+    font-size: 13pt;
+    font-weight: 600;
+    font-variant-ligatures: none;
+    color: #1a1a1a;
+    line-height: 1.15;
+    text-align: center;
+    word-break: break-word;
+  }
+
+  .role-tag {
+    font-size: 8.5pt;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #8534F3;
+    font-weight: 600;
+  }
+
+  .event-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    font-size: 8.5pt;
+    letter-spacing: 0.08em;
+    color: #1a1a1a;
+    font-weight: 400;
+  }
+
+  .event-info .date {
+    font-weight: 700;
+  }
+
+  .foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    color: #1a1a1a;
+    font-size: 6pt;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .toolbar {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 100;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .toolbar button {
+    padding: 8px 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  .btn-print { background: #222; color: #fff; }
+  .btn-print:hover { background: #444; }
+
+  .toolbar .hint {
+    font-size: 11px;
+    color: #666;
+    max-width: 280px;
+    line-height: 1.4;
+  }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <button class="btn-print" onclick="window.print()">Imprimir</button>
+  <span class="hint">9 credenciales de 7.16&times;11 cm (vertical). Ajustar a p&aacute;gina al imprimir.</span>
+</div>
+
+<div class="page" id="page"></div>
+
+<script>
+const names = [
+  "Abigail Ortiz",
+  "Hibiki Obara",
+  "Erwan Gras",
+  "Leila Eunice Domínguez Esquivel",
+  "William Wright",
+  "Laura Acosta",
+  "Fabio Cuevas",
+  "Eduardo Areco",
+  "Gustavo Gamarra"
+];
+
+const ghMark = `<svg class="github-mark" viewBox="0 0 24 24"><path fill="#1a1a1a" d="M10.226 17.284c-2.965-.36-5.054-2.493-5.054-5.256 0-1.123.404-2.336 1.078-3.144-.292-.741-.247-2.314.09-2.965.898-.112 2.111.36 2.83 1.01.853-.269 1.752-.404 2.853-.404 1.1 0 1.999.135 2.807.382.696-.629 1.932-1.1 2.83-.988.315.606.36 2.179.067 2.942.72.854 1.101 2 1.101 3.167 0 2.763-2.089 4.852-5.098 5.234.763.494 1.28 1.572 1.28 2.807v2.336c0 .674.561 1.056 1.235.786 4.066-1.55 7.255-5.615 7.255-10.646C23.5 6.188 18.334 1 11.978 1 5.62 1 .5 6.188.5 12.545c0 4.986 3.167 9.12 7.435 10.669.606.225 1.19-.18 1.19-.786V20.63a2.9 2.9 0 0 1-1.078.224c-1.483 0-2.359-.808-2.987-2.313-.247-.607-.517-.966-1.034-1.033-.27-.023-.359-.135-.359-.27 0-.27.45-.471.898-.471.652 0 1.213.404 1.797 1.235.45.651.921.943 1.483.943.561 0 .92-.202 1.437-.719.382-.381.674-.718.944-.943"/></svg>`;
+
+const copilotText = `<svg class="copilot-text" viewBox="0 0 154 24"><path fill="#1a1a1a" d="M2 11.875c0 5.256 3.013 8.506 8.19 8.506 4.76 0 8.027-2.72 8.027-7.722v-1.545h-7.982v2.928h4.095c-.161 1.96-1.68 3.25-4.049 3.25-2.6 0-4.347-1.498-4.347-4.334V10.7c0-2.582 1.518-4.31 4.186-4.31 1.91 0 3.267.922 3.68 2.374h3.865c-.437-3.366-3.427-5.625-7.499-5.625C5.29 3.138 2 6.366 2 11.875zm17.308-5.44h3.496V3h-3.496v3.435zm0 13.715h3.496V7.795h-3.496V20.15zm10.544-9.52h2.438V7.795h-2.438V3.922h-3.496v3.873H24.17v2.835h2.186v6.8c0 1.637.69 2.72 2.76 2.72h3.174v-2.766h-2.438V10.63zm3.994 9.52h3.727v-7.076h7.568v7.076h3.726V3.346h-3.726v6.777h-7.568V3.346h-3.727V20.15zM62.385 7.795h-3.497v6.523c0 1.868-1.012 3.205-2.668 3.205-1.38 0-2.162-.83-2.162-2.56V7.796h-3.52v7.722c0 2.95 1.357 4.864 4.118 4.864 1.955 0 3.29-.945 4.002-2.49h.207l.46 2.26h3.06V7.794zm1.698 12.355h3.06l.436-2.213h.207c.713 1.591 2.3 2.444 4.072 2.444 3.174 0 5.015-2.374 5.015-6.385 0-4.057-1.887-6.432-5.084-6.432-1.978 0-3.428 1.014-4.003 2.49h-.207V3h-3.496v17.15zm3.496-5.624v-1.06c0-1.845 1.173-3.043 2.99-3.043 1.657 0 2.738.853 2.738 2.581v1.983c0 1.521-.874 2.559-2.714 2.559-1.864 0-3.014-1.222-3.014-3.02zm21.8 5.855c4.21 0 7.177-2.351 7.683-6.063h-3.151c-.46 2.098-2.186 3.389-4.486 3.389-2.852 0-4.67-1.867-4.67-4.518v-2.743c0-2.882 1.887-4.634 4.716-4.634 2.53 0 4.072 1.36 4.44 3.366h3.151c-.368-3.665-3.243-6.063-7.499-6.063-5.038 0-7.982 3.274-7.982 8.668 0 5.348 2.898 8.598 7.798 8.598zm8.533-6.34c0 3.92 2.346 6.34 5.98 6.34 3.796 0 6.004-2.536 6.004-6.34 0-4.056-2.484-6.338-6.003-6.338-3.635 0-5.981 2.397-5.981 6.339zm2.898.992V13.12c0-1.89 1.22-3.066 3.083-3.066 1.817 0 3.082 1.152 3.082 3.066v1.913c0 1.96-1.288 2.997-3.082 2.997-1.749 0-3.083-1.015-3.083-2.997zM111.018 24h2.853v-6.132h.184c.667 1.453 2.116 2.398 4.186 2.398 3.083 0 4.992-2.26 4.992-6.293 0-3.942-1.863-6.27-4.992-6.27-1.863 0-3.427.852-4.186 2.397h-.184l-.345-2.167h-2.508V24zm6.211-6.063c-2.024 0-3.358-1.314-3.358-3.342v-1.222c0-2.005 1.31-3.342 3.381-3.342 2.002 0 3.037 1.152 3.037 2.881v2.144c0 1.815-1.16 2.849-2.973 2.88l-.087.001zm7.1-11.733h2.83V3.115h-2.83v3.09zm0 13.946h2.83V7.933h-2.83V20.15zm4.338 0h2.83V3.115h-2.83V20.15zm9.927-12.447c3.52 0 6.004 2.282 6.004 6.339 0 3.803-2.208 6.339-6.004 6.339-3.634 0-5.98-2.42-5.98-6.34 0-3.941 2.346-6.338 5.98-6.338zm10.922-3.689v3.919H152v2.328h-2.484v7.607H152v2.282h-2.99c-1.749 0-2.324-.922-2.324-2.282v-7.607h-2.185V7.933h2.185V4.014h2.83zm-10.922 6.04c-1.863 0-3.082 1.175-3.082 3.066v1.913c0 1.982 1.334 2.997 3.082 2.997 1.795 0 3.083-1.038 3.083-2.997V13.12c0-1.914-1.265-3.066-3.083-3.066z"/></svg>`;
+
+const page = document.getElementById('page');
+names.forEach(name => {
+  const card = document.createElement('div');
+  card.className = 'credential';
+  card.innerHTML = `
+    <div class="corner corner-tl"></div>
+    <div class="corner corner-tr"></div>
+    <div class="corner corner-bl"></div>
+    <div class="corner corner-br"></div>
+    <div class="content">
+      <div class="header">
+        ${ghMark}
+        ${copilotText}
+        <div class="event-name">GitHub Copilot<br>Dev Days</div>
+      </div>
+      <div class="sep"></div>
+      <div class="name-zone">
+        <div class="name-field">${name}</div>
+        <div class="role-tag">Participante</div>
+      </div>
+      <div class="sep"></div>
+      <div class="event-info">
+        <span class="date">25 de Abril, 2026</span>
+        <span>Ciudad del Este, Paraguay</span>
+        <span>Mi LAB · Plaza City</span>
+      </div>
+    </div>`;
+  page.appendChild(card);
+});
+</script>
+
+</body>
+</html>
