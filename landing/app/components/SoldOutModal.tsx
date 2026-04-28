@@ -4,21 +4,22 @@ import { useState, useEffect, useCallback } from 'react'
 
 export default function SoldOutModal() {
   const [isVisible, setIsVisible] = useState(false)
+  const storageKey = 'event-finished-seen'
 
   const handleClose = useCallback(() => {
-    sessionStorage.setItem('soldout-seen', 'true')
+    sessionStorage.setItem(storageKey, 'true')
     setIsVisible(false)
-  }, [])
+  }, [storageKey])
 
   useEffect(() => {
-    if (sessionStorage.getItem('soldout-seen')) return
+    if (sessionStorage.getItem(storageKey)) return
 
     const timer = setTimeout(() => {
       setIsVisible(true)
     }, 350)
 
     return () => clearTimeout(timer)
-  }, [])
+  }, [storageKey])
 
   useEffect(() => {
     if (!isVisible) return
@@ -53,7 +54,12 @@ export default function SoldOutModal() {
         <div className="soldout-icon-wrapper">
           <svg className="soldout-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <path
-              d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+              d="M12 22C17.523 22 22 17.523 22 12S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10Z"
+              stroke="currentColor"
+              strokeWidth="2"
+            />
+            <path
+              d="m8 12 2.5 2.5L16 9"
               stroke="currentColor"
               strokeWidth="2"
               strokeLinecap="round"
@@ -62,32 +68,31 @@ export default function SoldOutModal() {
           </svg>
         </div>
 
-        <span className="soldout-badge">LISTA DE ESPERA DISPONIBLE</span>
+        <span className="soldout-badge">EVENTO FINALIZADO</span>
 
-        <h2 className="soldout-title" id="soldout-title">¡Cupos Agotados!</h2>
+        <h2 className="soldout-title" id="soldout-title">¡Evento finalizado con éxito!</h2>
 
         <div className="soldout-body">
           <p>
-            Debido al alto flujo de registros y la extraordinaria demanda, los cupos disponibles
-            se agotaron en tiempo récord.
+            Gracias por acompañarnos en esta edición de <strong>GitHub Copilot Dev Days</strong>.
+            La jornada cerró exitosamente y alcanzamos los objetivos de aprendizaje y comunidad.
           </p>
           <p>
-            Si aún deseas participar, puedes inscribirte en la <strong>lista de espera</strong>.
-            En caso de que algún participante desista, serás notificado con prioridad para
-            confirmar tu lugar.
+            Agradecemos a todas las personas asistentes, speakers y colaboradores por hacer posible
+            este encuentro. Muy pronto compartiremos novedades de próximas actividades.
           </p>
         </div>
 
         <div className="soldout-highlight">
-          <span className="soldout-highlight-icon" aria-hidden="true">✉️</span>
+          <span className="soldout-highlight-icon" aria-hidden="true">🎉</span>
           <p>
-            <strong>Mantente atento a tu correo electrónico</strong> — será el canal oficial
-            de comunicación para cualquier actualización sobre tu inscripción.
+            <strong>Gracias por ser parte de la comunidad.</strong> Seguinos para enterarte de
+            futuras ediciones y nuevos espacios de formación.
           </p>
         </div>
 
         <button className="soldout-btn" onClick={handleClose} autoFocus>
-          Entendido, ver página
+          Entendido
         </button>
 
       </div>

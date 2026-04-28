@@ -34,7 +34,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Lista de espera ↗
+          Próximas fechas ↗
         </a>
       </nav>
 
@@ -102,13 +102,13 @@ export default function Home() {
             data-luma-action="checkout"
             data-luma-event-id="evt-m1xp6Y25jC1Dix9"
           >
-            🔔 Unirme a la lista de espera
+            📅 Ver próximas fechas
           </a>
         </div>
 
         <div className="hero-scarcity animate-in animate-delay-4">
           <span className="scarcity-dot" />
-          <span>Cupos agotados · Lista de espera disponible</span>
+          <span>Evento finalizado · Quédate atento a próximas ediciones</span>
         </div>
 
         <a
@@ -449,11 +449,11 @@ export default function Home() {
       <section className="section register-section" id="registro">
         <div className="container">
           <div className="section-header">
-            <p className="section-eyebrow">Lista de espera</p>
-            <h2 className="section-title">¡Únete a la lista de espera!</h2>
+            <p className="section-eyebrow">Evento finalizado</p>
+            <h2 className="section-title">¡Gracias por ser parte!</h2>
             <p className="section-subtitle">
-              Los cupos se agotaron, pero aún puedes anotarte en la lista de espera.<br />
-              Si un lugar se libera, recibirás un email de confirmación con todos los detalles.
+              Esta edición ya cerró con éxito.<br />
+              Quédate atento a las próximas fechas y nuevas convocatorias.
             </p>
           </div>
 
@@ -462,22 +462,22 @@ export default function Home() {
             <div className="urgency-card urgency-limited">
               <span className="urgency-icon">⚡</span>
               <div>
-                <div className="urgency-title">Cupos Agotados</div>
-                <div className="urgency-desc">Los cupos se agotaron de forma extraordinaria. Anótate en la lista de espera.</div>
+                <div className="urgency-title">Edición cerrada</div>
+                <div className="urgency-desc">La jornada finalizó y completó su agenda de forma exitosa.</div>
               </div>
             </div>
             <div className="urgency-card urgency-confirm">
               <span className="urgency-icon">✅</span>
               <div>
-                <div className="urgency-title">Confirmación Requerida</div>
-                <div className="urgency-desc">Recibirás un email de confirmación. Si no podés asistir, por favor cancelá para liberar el cupo.</div>
+                <div className="urgency-title">Comunidad activa</div>
+                <div className="urgency-desc">Seguiremos compartiendo novedades por los canales oficiales del evento.</div>
               </div>
             </div>
             <div className="urgency-card urgency-free">
               <span className="urgency-icon">🎟️</span>
               <div>
-                <div className="urgency-title">100% Gratuito</div>
-                <div className="urgency-desc">Sin costo alguno. Solo traé tu laptop y muchas ganas de aprender IA.</div>
+                <div className="urgency-title">Próximas fechas</div>
+                <div className="urgency-desc">Muy pronto anunciaremos nuevas ediciones para seguir aprendiendo con IA.</div>
               </div>
             </div>
           </div>
@@ -505,10 +505,10 @@ export default function Home() {
               data-luma-event-id="evt-m1xp6Y25jC1Dix9"
               style={{ maxWidth: '380px', width: '100%' }}
             >
-              🔔 Unirme a la lista de espera
+              📅 Ver próximas fechas
             </a>
             <span className="register-note">
-              🔒 Gratuito · Confirmación por email · Lista de espera
+              📣 Evento finalizado · Próximas fechas por anunciar
             </span>
           </div>
         </div>
